@@ -46,7 +46,7 @@ open class ExpandableCell: UITableViewCell {
         arrowImageView.frame = CGRect(x: width - rightMargin, y: (height - 11)/2, width: 22, height: 11)
     }
 
-    func open() {
+    open func open() {
         self.isOpen = true
         self.initialExpansionAllowed = false
         if highlightAnimation == .animated {
@@ -56,7 +56,7 @@ open class ExpandableCell: UITableViewCell {
         }
     }
 
-    func close() {
+    open func close() {
         self.isOpen = false
         if highlightAnimation == .animated {
             UIView.animate(withDuration: 0.3) {[weak self] in
